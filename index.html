@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/web-icon.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>ToDo list</title>
+</head>
+<body>
+    
+    <!-- start of todo tasks title section -->
+    <h1 class="title">Stuff's I need to do</h1>
+    <div class="all-tasks">
+        <h3 class="task-list-title">My lists</h3>
+        <ul class="task-list" data-lists>
+            <li class="list-name active-list">Youtube</li>
+            <li class="list-name">Work</li>
+            <li class="list-name">Grocery</li>
+        </ul>
+        <form action="" data-new-list-form>
+            <input 
+                type="text"
+                id="new_list"
+                class="new list"
+                data-new-list-input
+                placeholder="new list name"
+                aria-label="new list name"
+            />
+            <button class="btn create" aria-label="create new list">+</button>
+        </form>
+    </div>
+    <!-- end of todo tasks title section -->
+
+    <!-- start of todo list items section -->
+    <div class="todo-list" data-list-display-container>
+        <div class="todo-header">
+            <h3 class="list-title" data-list-title>Youtube</h3>
+            <p class="task-count" data-list-count>3 tasks remaining</p>
+        </div>
+        <div class="todo-body">
+            <div class="tasks" data-tasks>
+                <div data-tasks-container>
+                    <!-- /task-1 -->
+                    <div class="task" data-task>
+                        <input
+                            type="checkbox"
+                            id="task-1"
+                        />
+                        <label for="task-1">
+                            <span class="custom-checkbox"></span>
+                            This is the first task
+                        </label>
+                    </div>
+
+                    <!-- /task-2 -->
+                    <div class="task">
+                        <input
+                            type="checkbox"
+                            id="task-2"
+                        />
+                        <label for="task-2">
+                            <span class="custom-checkbox"></span>
+                            This is the second task
+                        </label>
+                    </div>
+
+                    <!-- /task-3 -->
+                    <div class="task">
+                        <input
+                            type="checkbox"
+                            id="task-3"
+                        />
+                        <label for="task-3">
+                            <span class="custom-checkbox"></span>
+                            This is the third task
+                        </label>
+                    </div>
+                </div>
+
+                <div class="new-task-creator">
+                    <form action="" data-new-task-form>
+                        <input
+                            type="text"
+                            class="new task"
+                            data-new-task-input
+                            placeholder="new task name"
+                            aria-label="new task name"
+                        />
+                        <button class="btn create" aria-label="create new task">+</button>
+                    </form>
+                </div>
+
+                <div class="delete-stuff">
+                    <button class="btn delete" data-delete-task-button>clear completed tasks</button>
+                    <button class="btn delete" data-delete-list-button>Delete List</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- end of todo list items section -->
+
+</body>
+<script src="./js/script.js"></script>
+</html>
